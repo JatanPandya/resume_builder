@@ -46,9 +46,7 @@ class _educationalInformationState extends State<educationalInformation> {
             controller: _txt_educational_Degree,
             onSaved: (String? value) {},
             validator: (String? value) {
-              return (value != null && value.contains('@'))
-                  ? 'Do not use the @ char.'
-                  : null;
+              return (value == null) ? 'Must enter Degree' : null;
             },
           ),
           TextFormField(
